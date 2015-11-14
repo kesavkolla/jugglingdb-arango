@@ -4,16 +4,21 @@
   "description": "ArangoDb adapter for jugglingdb",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit test/arango.js"
+    "test": "node_modules/.bin/mocha test/*.test.js -R spec -t 10000"
   },
   "dependencies": {
-    "arango": "git://github.com/kaerus-component/arango.git#devel"
+    "arango": "~0.4.x"
   },
   "devDependencies": {
     "jugglingdb": "= 0.2.x",
-    "nodeunit": "latest"
+    "should": "~1.2.2",
+    "mocha": "~1.8.2",
+    "semicov": "~0.1.1-1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m0ppers/jugglingdb-arango.git"
+  },
   "author": "Andreas Streichardt <andreas.streichardt@gmail.com>",
   "license": "MIT"
 }
